@@ -1,0 +1,160 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+
+- story: interactive_story_1
+  steps:
+  - intent: request_service
+  - action: action_find_best_service
+  - action: utter_time_options
+  - intent: create_immediate
+  - action: action_create_service
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - action: utter_ask_help
+  - intent: request_service
+  - action: action_find_best_service
+  - action: utter_time_options
+  - intent: some_time_later
+  - action: action_find_time
+  - intent: affirm
+  - action: action_create_service
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_3
+  steps:
+  - intent: request_help
+  - action: utter_ask_help
+  - intent: request_service
+  - action: action_find_best_service
+  - action: utter_time_options
+  - intent: request_service
+  - action: action_find_best_service
+  - action: utter_time_options
+  - intent: create_immediate
+  - action: action_create_service
+  - intent: affirm
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: interactive_story_4
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_help
+  - action: utter_ask_help
+  - intent: request_service
+  - intent: request_service
+  - action: action_find_best_service
+  - action: utter_time_options
+  - intent: some_time_later
+  - action: action_find_time
+  - intent: affirm
+  - action: action_create_service
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_5
+  steps:
+  - intent: request_help
+  - action: utter_ask_help
+  - intent: request_service
+  - action: action_find_best_service
+  - action: utter_time_options
+  - intent: some_time_later
+  - action: action_find_time
+  - intent: deny
+  - action: utter_time_options
+  - intent: some_time_later
+  - action: action_find_time
+  - intent: affirm
+  - action: action_create_service
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_6
+  steps:
+  - intent: request_help
+  - action: utter_ask_help
+  - intent: request_service
+  - action: action_find_best_service
+  - action: utter_time_options
+  - intent: some_time_later
+  - action: action_find_time
+  - intent: affirm
+  - action: action_create_service
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_7
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: request_service
+  - action: action_find_best_service
+  - action: utter_time_options
+  - intent: some_time_later
+  - action: action_find_time
+  - intent: affirm
+  - action: action_create_service
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: interactive_story_8
+  steps:
+  - intent: request_help
+  - action: utter_ask_help
+  - intent: request_service
+  - action: action_find_best_service
+  - action: utter_time_options
+  - intent: some_time_later
+  - action: action_find_time
+  - intent: request_service
+  - intent: deny
+  - action: utter_time_options
+  - intent: some_time_later
+  - action: action_find_time
+  - intent: deny
+  - action: utter_time_options
+  - intent: some_time_later
+  - action: action_find_time
+  - intent: affirm
+  - action: action_create_service
+  - intent: goodbye
+  - action: utter_goodbye

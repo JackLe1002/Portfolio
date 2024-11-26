@@ -1,0 +1,73 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  labels:
+    app: ht-webserver-dev
+    app.kubernetes.io/component: ht-webserver-dev
+    app.kubernetes.io/instance: ht-webserver-dev
+  name: ht-webserver-dev
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      deployment: ht-webserver-dev
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      creationTimestamp: null
+      labels:
+        deployment: ht-webserver-dev
+        app: ht-webserver-dev
+    spec:
+      serviceAccountName: proveit-sa-admin
+      containers:
+        - env:
+          - name: name
+            value: ht-webserver-dev
+          - name: FRONT_URL
+            value: <PATCH_ME>
+          - name: HOMIE_URL
+            value: <PATCH_ME>
+          - name: API_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: api-key
+                key: API_TOKEN
+          - name: OAUTH_CLIENT_ID
+            valueFrom:
+              secretKeyRef:
+                name: oauth
+                key: CLIENT_ID
+          - name: OAUTH_CLIENT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: oauth
+                key: CLIENT_SECRET
+          - name: OAUTH_REFRESH_TOKEN
+            valueFrom:
+              secretKeyRef:
+                name: oauth
+                key: REFRESH_TOKEN
+          image: <PATCH_ME>
+          imagePullPolicy: Always
+          name: ht-webserver-dev
+          ports:
+            - containerPort: 5000
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

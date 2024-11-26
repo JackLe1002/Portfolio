@@ -1,0 +1,65 @@
+{
+  "name": "prove-it",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0 --output-file lint-results/eslint-results.json",
+    "preview": "vite preview",
+    "test": "jest",
+    "format": "prettier-eslint --write **/*.tsx",
+    "integration-tests": "jest integration-tests"
+  },
+  "dependencies": {
+    "bootstrap": "5.3.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-bootstrap": "2.9.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/preset-env": "^7.23.2",
+    "@babel/preset-react": "^7.22.15",
+    "@babel/preset-typescript": "^7.23.2",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.0.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitejs/plugin-react": "^4.0.3",
+    "babel-jest": "^29.7.0",
+    "chromedriver": "^119.0.0",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "esm": "^3.2.25",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "prettier-eslint-cli": "^8.0.1",
+    "react-router-dom": "^6.18.0",
+    "selenium-webdriver": "^4.15.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.5"
+  },
+  "description": "\\*\\*This branch acts as an intermediate for the code in development and the code in production.\r All other branches are first merged into this branch.\r Other branches will be deleted after merging.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/ht6401839/uofw/proveit.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/ht6401839/uofw/proveit/issues"
+  },
+  "homepage": "https://gitlab.com/ht6401839/uofw/proveit#readme"
+}

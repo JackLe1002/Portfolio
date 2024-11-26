@@ -1,0 +1,85 @@
+.main_addProperty {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 50px;
+    margin-top: 10px;
+}
+
+.main_addProperty::before {
+    content: "Property Info";
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 0 10px;
+}
+
+/* Consolidated Styles for Dropdown Toggle */
+.searchableDropdown .dropdown-toggle,
+#state-dropdown.dropdown-toggle,
+#city-dropdown.dropdown-toggle,
+#zip-dropdown.dropdown-toggle,
+#property-type-dropdown.dropdown-toggle {
+    width: 100%;
+    background-color: #194185;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.searchableDropdown .dropdown-toggle:hover,
+.searchableDropdown .dropdown-toggle:focus,
+#state-dropdown.dropdown-toggle:hover,
+#city-dropdown.dropdown-toggle:hover,
+#zip-dropdown.dropdown-toggle:hover,
+#property-type-dropdown.dropdown-toggle:hover {
+    background-color: #194185;
+    color: white;
+}
+
+/* Styles for Dropdown Menu */
+.searchableDropdown .dropdown-menu,
+#state-dropdown.dropdown-menu,
+#city-dropdown.dropdown-menu,
+#zip-dropdown.dropdown-menu,
+#property-type-dropdown.dropdown-menu {
+    text-align: left;
+    background-color: #194185;
+    border: 1px solid #194185;
+}
+
+/* Styles for Dropdown Items */
+.searchableDropdown .dropdown-item,
+.locationDropdown.dropdown-item {
+    color: white;
+}
+
+.forms {
+    width: 300px;
+    margin: 20px;
+    align-items: center;
+}
+
+.submit-button {
+    min-width: 100%;
+    max-width: 300px;
+    background-color: #194185;
+    border: 3px outset #194185;
+    color: white;
+    margin: 20px auto;
+    display: block;
+}
+
+.goBackButton {
+    background-color: #194185;
+    border: 3px outset #194185;
+    color: white;
+}
+
+.form-label{
+    padding-top: 2%;
+    margin-bottom: 0;
+}
+

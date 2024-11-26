@@ -1,0 +1,53 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  labels:
+    app: ht-bot-actions-server
+    app.kubernetes.io/component: ht-bot-actions-server
+    app.kubernetes.io/instance: ht-bot-actions-server
+  name: ht-bot-actions-server
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      deployment: ht-bot-actions-server
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      creationTimestamp: null
+      labels:
+        deployment: ht-bot-actions-server
+        app: ht-bot-actions-server
+    spec:
+      serviceAccountName: proveit-sa-admin
+      containers:
+        - env:
+            - name: name
+              value: ht-bot-actions-server
+            - name: TRANSFORMERS_CACHE
+              value: /app/.cache/huggingface/transformers
+            - name: SERVER_URL
+              value: <PATCH_ME>
+          image: <PATCH_ME>
+          imagePullPolicy: Always
+          name: ht-bot-actions-server
+          ports:
+            - containerPort: 5055
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

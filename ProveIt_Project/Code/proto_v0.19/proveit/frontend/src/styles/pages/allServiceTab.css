@@ -1,0 +1,39 @@
+.allsp-container {
+    background: #f4f7fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    overflow: auto;
+    padding-top: 10%;
+
+}
+
+main{
+    flex: 1;
+    margin: auto;
+    width: 80%;
+}
+
+.dashboard-footer {
+    background-color: #194185;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.bg-info-table {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button-container {
+padding-top: 5%;
+}

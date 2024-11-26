@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: ht-bot-server-dev
+    app.kubernetes.io/component: ht-bot-server-dev
+    app.kubernetes.io/instance: ht-bot-server-dev
+  name: ht-bot-server-dev
+spec:
+  ports:
+    - name: 5005-tcp
+      port: 5005
+      protocol: TCP
+      targetPort: 5005
+
+  selector:
+    app: ht-bot-server-dev
+  sessionAffinity: None
+  type: ClusterIP

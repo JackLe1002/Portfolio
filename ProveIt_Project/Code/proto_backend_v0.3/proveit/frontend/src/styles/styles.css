@@ -1,0 +1,254 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+#root {
+  padding: 2rem;
+}
+
+.main-logo {
+  width: 500px;
+  padding: 2rem;
+}
+
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-cluster {
+  width: 30rem;
+}
+
+.signup-cluster {
+  width: 30rem;
+}
+
+.login-button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.login-button,
+.create-account-button,
+.verify-phone-button {
+  min-width: 14rem;
+  background-color: #194185;
+  border: 3px outset #194185;
+}
+
+.remember-forgot-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+}
+.welcome-message {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 18pt;
+}
+
+.PhoneInputCluster {
+  width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.verify-phone-button {
+  width: 100%;
+}
+
+#phone-input {
+  margin-bottom: 1.5rem;
+}
+.sign-up-button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.sign-up-button {
+  min-width: 28rem;
+}
+
+/*For role selection page*/
+div.select-role-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+div.info-message {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 18pt;
+}
+
+div.button-options-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+div.button-option-group {
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 500px;
+}
+
+div.option-description {
+  text-align: center;
+}
+
+.standard-button {
+  background-color: #194185;
+  border: 3px outset #194185;
+}
+
+/*For OTP Verification page*/
+.otp-input-cluster {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.otp-input-control {
+    width:100%;
+    max-width:600px;
+    margin-bottom:20px;
+    text-align:center;
+}
+
+.dashboard-logo {
+    width: 20vw;
+    padding: 1rem;
+}
+
+.dashboard-container{
+    width: 100%;
+    height: 100%;
+}
+
+.dashboard-left-side{
+    display: inline-block;
+    vertical-align: middle;
+    width: 80%;
+    height: 55vh;
+}
+
+.dashboard-title{
+    font-family: sans-serif;
+    font-size: 2.5vw;
+    text-align: center;
+}
+
+.dashboard-label{
+    font-family: sans-serif;
+    font-size: 2vw;
+    text-align: left;
+}
+.dashboard-table-container{
+    height: 35vh;
+}
+
+.dashboard-table{
+    width: 100%;
+    border-collapse: collapse; 
+    border: 2px solid;
+}
+
+.dashboard-empty-property{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: gray;
+}
+
+.dashboard-empty-service{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.dashboard-header{
+    text-align: left;
+    background-color: grey;
+    border-bottom: 2px solid;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.dashboard-link{
+    background-color: grey;
+}
+
+.tip-table-container{
+    display: inline-block;
+    vertical-align: middle;
+    width: 15vw;
+    height: 52vh;
+    margin-left: 2%;
+    margin-top: 4%;
+    border: 2px solid;
+    background-color: grey;
+}
+
+.tip-table{
+    text-align: center;
+    border-collapse: collapse; 
+    background-color: grey;
+    
+}
+
+.dashboard-tip-header{
+    font-family: sans-serif;
+    font-size: 2vw;
+    text-decoration: underline;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.logout-button{
+    float:right;
+    background-color:#194185;
+    border: 3px outset #194185;
+    color: white;
+}
+
+.no-info-error {
+    background-color: #ffcccc;
+    border: 1px solid #b51d18;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top: 4px solid #194185;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg)}
+}

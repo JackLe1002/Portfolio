@@ -1,0 +1,51 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  labels:
+    app: ht-bot-server
+    app.kubernetes.io/component: ht-bot-server
+    app.kubernetes.io/instance: ht-bot-server
+  name: ht-bot-server
+spec:
+  progressDeadlineSeconds: 600
+  replicas: 1
+  revisionHistoryLimit: 10
+  selector:
+    matchLabels:
+      deployment: ht-bot-server
+  strategy:
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+    type: RollingUpdate
+  template:
+    metadata:
+      annotations:
+        openshift.io/generated-by: OpenShiftNewApp
+      creationTimestamp: null
+      labels:
+        deployment: ht-bot-server
+        app: ht-bot-server
+    spec:
+      serviceAccountName: proveit-sa-admin
+      containers:
+        - env:
+            - name: name
+              value: ht-bot-server
+            - name: ACTIONS_URL
+              value: <PATCH_ME>
+          image: <PATCH_ME>
+          imagePullPolicy: Always
+          name: ht-bot-server
+          ports:
+            - containerPort: 5005
+              protocol: TCP
+          resources: {}
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30

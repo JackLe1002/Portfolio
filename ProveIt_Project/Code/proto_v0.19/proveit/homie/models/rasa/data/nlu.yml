@@ -1,0 +1,174 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - thank you
+    - thanks
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - yup
+    - okay
+    - yeah yeah
+    - yeah
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no that is [not good](deny)
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: request_help
+  examples: |
+    - I need help
+    - I need assistance
+    - I need support
+    - I need help man
+    - bro, i need help
+    - i need help
+- intent: request_service
+  examples: |
+    - I need my [ac](problem) repaired
+    - fix my [ac](problem)
+    - my [ac](problem) is not working
+    - help for [ac](problem) service
+    - I need my [tub](problem) fixed
+    - fix my [sink](problem)
+    - my [shower](problem) is not working
+    - help for [plumbing](problem) service
+    - I need [plumbing](problem) service
+    - problem with [drainage](problem)
+    - obtain or renew a [license for my pet](problem)
+    - problems with [thermostat](problem)
+    - I need my [thermostat](problem) fixed
+    - [heat](problem) is not working in my house
+    - i need [child care](problem) services
+    - I need a [babysitter](problem)
+    - I need a [nanny](problem)
+    - [mold](problem) in my house
+    - [pest](problem) control
+    - I need [pest control](problem)
+    - [bed bugs](problem) problem
+    - I need [bed bugs](problem) control
+    - [yard waste](problem) removal
+    - i need to have my [roof replaced](problem)
+    - there is so much [weed in my yard](problem)
+    - [paint is peeling](problem) off
+    - I need to [paint my house](problem)
+    - I have a [leaking pipe](problem)
+    - my [roof](problem) is [cracking](problem)
+    - There is a problem with my [garage door](problem)
+    - The [thermostat](problem) is not working
+    - [thermostat](problem) is not changing the temprature
+    - i need to [paint my living room](problem)
+    - a [heard](problem) some wierd noise coming from the [roof](problem)
+- intent: change_service
+  examples: |
+    - I want to change the service
+    - change the service
+- intent: some_time_later
+  examples: |
+    - some time later
+    - later
+    - around 5 days
+    - 5 days later
+    - tomorrow
+    - next week
+    - in 2 days
+    - in 3 days
+    - in 4 days
+    - in 5 days
+    - after 5 days
+    - after 2 days
+    - after 3 days
+    - not now
+    - whenever you can
+    - whenever it is possible
+    - after a week
+    - I will [be](problem) gone in two weeks, I need to [be](problem) finish it by a week
+    - I want it done by the next week
+    - in a week
+- intent: create_immediate
+  examples: |
+    - now
+    - right now
+    - immediately
+    - as soon as possible
+    - asap
+    - now please
+    - right now please
+    - immediately please
+    - as soon as possible please
+    - asap please
+    - i want it [now](time)

@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: ht-website
+    app.kubernetes.io/component: ht-website
+    app.kubernetes.io/instance: ht-website
+  name: ht-website
+spec:
+  ports:
+    - name: 8080-tcp
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    - name: 8443-tcp
+      port: 8443
+      protocol: TCP
+      targetPort: 8443
+  selector:
+    app: ht-website
+  sessionAffinity: None
+  type: ClusterIP

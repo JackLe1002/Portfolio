@@ -1,0 +1,74 @@
+version: '3.1'
+intents:
+- affirm
+- bot_challenge
+- change_service
+- create_immediate
+- deny
+- goodbye
+- greet
+- mood_great
+- mood_unhappy
+- request_help
+- request_service
+- some_time_later
+entities:
+- deny
+- problem
+- time
+- service_name
+actions:
+- utter_ask_help
+- action_find_best_service
+- action_create_service
+- action_find_time
+- utter_time_options
+- utter_goodbye
+- utter_greet
+- utter_did_that_help
+- utter_happy
+- utter_create_service
+slots:
+  best_parent:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  best_child:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  timeline:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+  issue_detail:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: custom
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am your homie, a bot. What can I do for you?
+  utter_create_service:
+  - text: I will create a service request for you. Does the above look right to you?
+  utter_ask_help:
+  - text: What do you need help with?
+  utter_time_options:
+  - text: I can create the service request for you as soon as possible or at a later time. What do you prefer?
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

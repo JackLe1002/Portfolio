@@ -1,0 +1,336 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+main{
+    flex: 1;
+    margin: auto;
+    width: 80%;
+}
+
+.logo-and-title svg {
+    transform: scale(0.8);
+    transform-origin: center;
+}
+
+/* Main dashboard container */
+.dashboard-container {
+    background: #f4f7fa;
+    min-height: 100vh;
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+    overflow: auto;
+
+}
+
+/* Header styles */
+.header {
+    background-color: #194185; 
+    width: 100%;
+    color: white;
+    padding: 0.4rem 3rem 0.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.9);
+}
+
+/* Title styles */
+.dashboard-title {
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* Menu toggle button styles */
+.menu-toggle-button {
+    font-size: 1.5rem;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.account-icon {
+    /* Add your styles here, for example: */
+    font-size: 1.5rem;
+}
+
+/* Logout button styles */
+.logout-button {
+    color: white;
+    background-color: #194185; 
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold; 
+}
+
+/* Left side content styles */
+.dashboard-left-side {
+    padding: 1rem;
+}
+
+.new-request-container,
+.request-container,
+.properties-container,
+.service-container {
+    padding-left: 1rem; 
+    padding-right: 1rem; 
+    padding-bottom: 0.75rem;
+    width: 100%;
+}
+
+.new-request-container,
+.properties-container {
+    padding-top: 4rem;
+}
+
+.service-container{
+    padding-top: 2rem;
+}
+
+/* Adjust the label for the properties to match the Services label */
+.dashboard-label {
+    font-weight: bold;
+    text-align: left;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    background: none;
+    border: none;
+    box-shadow: none; 
+    display: block; 
+}
+
+/* Table styles */
+.dashboard-table {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075); 
+    width: 100%;
+    max-width: 100%;
+    border-collapse: separate; 
+    border-spacing: 0; 
+    margin: auto; 
+    border-radius: 25px;
+    overflow: hidden; 
+}
+
+/* Table header styles */
+.dashboard-table .dashboard-header {
+    background: #e9ecef; 
+    color:#333435;
+    border-top: none;
+    margin-top: 8rem;
+}
+
+.dashboard-table th,
+.dashboard-table td {
+    border: 1px solid #dee2e6; 
+    padding: 0.75rem; 
+    text-align: left;
+}
+
+.dashboard-table .dashboard-empty-service,
+.dashboard-table .dashboard-empty-property {
+    text-align: center; 
+    padding: 1rem; 
+}
+
+.property-detail-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-y: auto;
+    max-height: 300px;
+}
+  
+.property-detail-table th,
+.property-detail-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    white-space: nowrap;
+}
+  
+.property-detail-table th {
+    text-align: left;
+    background-color: #f2f2f2;
+}
+  
+.property-detail-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+  
+.property-detail-table tr:hover {
+    background-color: #ddd;
+}
+
+.dashboard-table tbody tr:nth-of-type(odd) {
+    background-color: #f8f9fa;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.dashboard-table tbody tr:nth-of-type(even) {
+    background-color: white;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Add property and Request service button styles */
+.add-property-button,
+.request-service-button,
+.delete-button,
+.add-service-buttom {
+    background-color: #194185;
+    color: white;
+    border-radius: 0.25rem;
+    border: none;
+    padding: 0.375rem 0.75rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+
+.add-service-buttom {
+    margin: 1rem;
+}
+
+/* Hover effect for buttons */
+.add-property-button:hover,
+.request-service-button:hover,
+.delete-button:hover,
+.add-service-buttom:hover {
+    background-color: #194185;
+}
+
+/* Footer styles */
+.dashboard-footer {
+    background-color: #194185;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin-top: 80px;
+}
+
+/* Footer link styles */
+.footer-content .footer-links a {
+    color: white;
+    padding: 0 0.5rem;
+}
+
+/* Delete confirmation popup styles */
+.delete-confirmation-popup {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 0.25rem;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1060; 
+    border: 1px solid #dee2e6;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Delete confirmation buttons */
+.delete-confirmation-popup button {
+    margin-top: 1rem;
+}
+
+/* Custom styles for the tab headers */
+.custom-tab-header {
+    background-color: #e9ecef;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
+    border-radius: 25px 25px 0 0;
+}
+
+.add-service-tab:hover,
+.custom-tab-link:hover {
+    border-radius: 5px 5px 0 0;
+    background-color: lightblue; /* Change background color on hover */
+}
+
+/* Custom styles for the tab content */
+.custom-tab-content {
+    background-color: white;
+    padding: 15px; /* Adjust padding as needed */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow */
+    border-radius: 0 0 25px 25px;
+}
+
+/* Centered column-direction flexbox */
+.apply-public {
+    margin: auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    align-self:center;
+    background-color:white;
+    width:80%;
+    border-radius:15px;
+    border: 1px solid #dee2e6;
+    padding:10px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.apply-public p {
+    text-align:center;
+}
+
+.apply-public button {
+    width: 50%;
+    min-width:200px;
+    max-width:500px;
+}
+
+.nav-container {
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+}
+
+.nav-link {
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.nav-link:hover {
+    background-color: #bbbaba;
+}
+
+.properties-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.centered-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+th {
+    font-size: large;
+}

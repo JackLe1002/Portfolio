@@ -1,0 +1,18 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  annotations:
+    openshift.io/host.generated: "true"
+  labels:
+    app: ht-website
+    app.kubernetes.io/component: ht-website
+    app.kubernetes.io/instance: ht-website
+  name: ht-website
+spec:
+  port:
+    targetPort: 8080
+  to:
+    kind: Service
+    name: ht-website
+    weight: 100
+  wildcardPolicy: None

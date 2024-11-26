@@ -1,0 +1,37 @@
+form.onboard-sp .submit-button {
+    background-color:#194185;
+    width:100%;
+    border:2px outset #194185;
+}
+
+form.onboard-sp .submit-button:hover {
+    background-color: #0b5ed7;
+}
+
+form.onboard-sp .form-group {
+    margin-bottom:15px;
+}
+
+form.onboard-sp {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+#onboard-sp-form-container::before {
+    position:relative;
+    top:12px;
+    left:10px;
+    content: "Company information";
+    background-color: white;
+    padding: 0 5px;
+}
+
+form.onboard-sp {
+    width:100%;
+}
+
+#onboard-sp-form-container {
+    width:100%;
+    max-width: 500px;
+}

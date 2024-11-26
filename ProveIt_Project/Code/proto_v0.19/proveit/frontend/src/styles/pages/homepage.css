@@ -1,0 +1,81 @@
+/*STYLES FOR HOMEPAGE
+TODO: Move this into own file, serve on page load*/
+div.homepage-logo-container {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+  }
+  
+a.ht-logo-link {
+  max-width:400px;
+  min-width:200px;
+  width:75%;
+}
+
+  img.homepage-ht-logo {
+    width:100%;
+  }
+  
+  img.homepage-proveit-logo {
+    width:25%;
+    max-width:100px;
+    min-width:50px;
+  }
+
+  div.homepage-main-container {
+    display:flex;
+    width:100%;
+  }
+  
+  div.homepage-main-left {
+    display:flex;
+    flex:2;
+    /*border:1px solid blue;
+    */
+    flex-direction:column;
+    align-items:center;
+  }
+  
+  div.homepage-main-right {
+    display:flex;
+    flex:1;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction:column;
+    /*border: 1px solid red;
+    */
+  }
+  
+  div.homepage-main-right p {
+    margin-bottom:0px;
+    text-align: center;
+  }
+  
+  div.homepage-main-left p {
+    text-align:center;
+    width:80%;
+  }
+  
+  button.homepage-action-button {
+    background-color:#194185;
+    border:3px outset #194185;
+    width:80%;
+    min-height:50px;
+    height:fit-content;
+  }
+  
+  img.homepage-graphic {
+    width:100%;
+    max-width: 500px;
+    min-width:100px;
+  }
+
+  hr.homepageHr {
+    margin-bottom: 5rem;
+  }
+
+  body {
+    height:100vh;
+    min-height: 100vh;
+  }

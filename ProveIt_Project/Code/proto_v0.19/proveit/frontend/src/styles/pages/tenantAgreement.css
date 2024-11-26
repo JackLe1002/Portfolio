@@ -1,0 +1,56 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+}
+
+.main_agreement {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    margin-top: 130px;
+    margin-bottom: 30px;
+    padding: 20px;
+    width: 470px;
+}
+
+.main_agreement::before {
+    content: "Agreement Info";
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    background-color: white;
+    padding: 0 10px;
+}
+
+.submitButton {
+    min-width: 100%;
+    max-width: 300px;
+    background-color: #194185;
+    border: 3px outset #194185;
+    color: white;
+    margin: 20px auto;
+    display: block;
+}
+
+.goBackButton {
+    background-color: #194185;
+    border: 3px outset #194185;
+    color: white;
+}
+
+/* Footer styles */
+.agreement-footer {
+    background-color: #194185;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}

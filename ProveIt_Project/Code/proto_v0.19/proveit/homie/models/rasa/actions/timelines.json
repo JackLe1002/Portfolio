@@ -1,0 +1,37 @@
+{
+    "data": [
+      {
+        "id": "2ac0a7e6-0001-11ed-88cb-e2ebf50b558a",
+        "title": "Around 1 day"
+      },
+      {
+        "id": "2ac0a7e6-0002-11ed-88cb-e2ebf50b558a",
+        "title": "Around 5 days"
+      },
+      {
+        "id": "2ac0a7e6-0003-11ed-88cb-e2ebf50b558a",
+        "title": "A week"
+      },
+      {
+        "id": "2ac0a7e6-0004-11ed-88cb-e2ebf50b558a",
+        "title": "More than a Week"
+      },
+      {
+        "id": "2ac0a7e6-0005-11ed-88cb-e2ebf50b558a",
+        "title": "Really depends on the job"
+      },
+      {
+        "id": "2ac0a7e6-0006-11ed-88cb-e2ebf50b558a",
+        "title": "Within 15 days"
+      },
+      {
+        "id": "2ac0a7e6-0007-11ed-88cb-e2ebf50b558a",
+        "title": "Within a month"
+      },
+      {
+        "id": "2ac0a7e6-0008-11ed-88cb-e2ebf50b558a",
+        "title": "As soon as possible"
+      }
+    ]
+  }
+  

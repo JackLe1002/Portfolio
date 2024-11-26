@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    openshift.io/generated-by: OpenShiftNewApp
+  labels:
+    app: ht-webserver-dev
+    app.kubernetes.io/component: ht-webserver-dev
+    app.kubernetes.io/instance: ht-webserver-dev
+  name: ht-webserver-dev
+spec:
+  ports:
+    - name: 5000-tcp
+      port: 5000
+      protocol: TCP
+      targetPort: 5000
+
+  selector:
+    app: ht-webserver-dev
+  sessionAffinity: None
+  type: ClusterIP
